@@ -1,0 +1,26 @@
+{
+    "name": "GoogleWords",
+    "description": "Get word from google translate",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "static/student2.png",
+        "48": "static/student2.png",
+        "128": "static/student2.png"
+    },
+    "action":{
+        "default_popup": "popup.html",
+        "default_icon": "static/student2.png"
+    },
+    "permissions": ["activeTab", "tabs", "contextMenus", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://translate.google.com/*"],
+            "css": ["contentScript.css"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
