@@ -13,17 +13,6 @@ chrome.runtime.onInstalled.addListener((details) => {
     chrome.tabs.create({
       url: `https://dictionary.cambridge.org/pl/dictionary/english/${event.selectionText}`,
     });
-    console.log(`Dodaje do local...${event.selectionText}`);
-   
-    items.push(event.selectionText);
-    chrome.storage.local.set({
-      item: items,
-    });
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      console.log(`TABS - ${tabs[0].title}, id: ${tabs[0].id}`);
-      //chrome.tabs.remove(tabs[0].id, function() {})
-      chrome.tabs.sendMessage(tabs[0].id, "aa", (response) => {console.log("I'm response: " + response)});
-    });
   });
 });
 
