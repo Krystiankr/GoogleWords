@@ -80,41 +80,6 @@ function renderItem(res) {
   SomeDeleteRowFunction();
 }
 
-storagePressed.addEventListener('click', () => {
-  console.log('storage pressed');
-  chrome.storage.local.get(['item'], (res) => {
-    for (const it in res.item) {
-      console.log('aaitem' + it + ': ' + res.item[it]);
-    }
-    console.log('aaaa' + res.item);
-  });
-});
-
-testPressed.addEventListener('click', () => {
-  console.log('test pressed');
-  renderItem('ang:pol');
-});
-
-usunPressed.addEventListener('click', () => {
-  refreshStorage()
-});
-
-displayPressed.addEventListener('click', () => {
-  console.log('Displaying...');
-  //const p_el = document.getElementById('p_element')
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    console.log(`TABS - ${tabs[0].title}, id: ${tabs[0].id}`);
-    //chrome.tabs.remove(tabs[0].id, function() {})
-    chrome.tabs.sendMessage(tabs[0].id, 'popup', (response) => {
-      console.log("I'm response: " + response);
-    });
-  });
-  chrome.storage.local.get(['item'], (res) => {
-    //p_el.textContent = res.item
-    renderItem(res.item, '2');
-    console.log(`-> ${res.item}`);
-  });
-});
 
 btnPressed.addEventListener('click', () => {
   chrome.runtime.sendMessage(null, 'popupjs', (response) => {

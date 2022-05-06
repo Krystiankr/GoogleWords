@@ -9,7 +9,7 @@
         "128": "static/student2.png"
     },
     "action":{
-        "default_popup": "popup.html",
+        "default_popup": "popup/popup.html",
         "default_icon": "static/student2.png"
     },
     "permissions": ["activeTab", "tabs", "contextMenus", "storage"],
@@ -22,5 +22,6 @@
             "css": ["contentScript.css"],
             "js": ["contentScript.js"]
         }
-    ]
+    ],
+    "options_page": "options/options.html"
 }
