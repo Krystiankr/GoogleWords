@@ -14,4 +14,4 @@ Choosing "options" allows us to display all added words as JSON
 
 The program aims to quickly migrate data stored in chrome extension to [RANDOM WORD](https://github.com/Krystiankr/PYQT5-Random-Words) program
 
-to load the extension, download the zip, unpack, then go to the [link](chrome://extensions/), enable developer settings and load the folder
+to load the extension, download the zip, unpack, then go chrome://extensions/, enable developer settings and load the folder
