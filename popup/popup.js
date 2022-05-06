@@ -80,6 +80,11 @@ function renderItem(res) {
   SomeDeleteRowFunction();
 }
 
+translatorBtn.addEventListener('click', () => {
+  chrome.tabs.create({
+    url: `https://translate.google.com/?sl=en&tl=pl&op=translate`,
+  });
+})
 
 btnPressed.addEventListener('click', () => {
   chrome.runtime.sendMessage(null, 'popupjs', (response) => {
