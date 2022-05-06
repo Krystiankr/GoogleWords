@@ -1,6 +1,6 @@
 # Google Words Chrome Extension v1.0
 
-Program, allows you to quickly add a word from a google translator to the temporary memory.
+Program, allows you to quickly add a word from a [google translator](https://translate.google.com/) to the temporary memory.
 
 Current functionalities:
 * add a word

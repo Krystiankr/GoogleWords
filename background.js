@@ -9,7 +9,6 @@ chrome.runtime.onInstalled.addListener((details) => {
     contexts: ['selection'],
   });
   chrome.contextMenus.onClicked.addListener((event) => {
- 
     chrome.tabs.create({
       url: `https://dictionary.cambridge.org/pl/dictionary/english/${event.selectionText}`,
     });
