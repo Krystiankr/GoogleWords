@@ -1,5 +1,5 @@
 {
-    "name": "GoogleWords",
+    "name": "RandomWords Extension",
     "description": "Get word from google translate",
     "version": "1.0",
     "manifest_version": 3,

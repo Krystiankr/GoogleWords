@@ -1,7 +1,6 @@
 const btnPressed = document.getElementById('dodajBtn');
-const displayPressed = document.getElementById('displayBtn');
-const testPressed = document.getElementById('testBtn');
-const usunPressed = document.getElementById('usunBtn');
+const disablePressed = document.getElementById('disableBtn');
+
 const storagePressed = document.getElementById('storageBtn');
 const textIndex = [];
 var storage_items = [];
@@ -80,11 +79,17 @@ function renderItem(res) {
   SomeDeleteRowFunction();
 }
 
+disablePressed.addEventListener('click', () => {
+  btnPressed.disabled = true;
+})
+
 translatorBtn.addEventListener('click', () => {
   chrome.tabs.create({
     url: `https://translate.google.com/?sl=en&tl=pl&op=translate`,
   });
 })
+
+
 
 btnPressed.addEventListener('click', () => {
   chrome.runtime.sendMessage(null, 'popupjs', (response) => {
